@@ -55,6 +55,7 @@ public class Connector {
 
 	public Connection setPassword(String password) throws SQLException {
 		this.password = password;
+		System.out.println("Hola");
 		return getConnection();
 	}
 
