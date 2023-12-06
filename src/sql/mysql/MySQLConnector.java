@@ -3,13 +3,15 @@ package sql.mysql;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import sql.Connector;
 /**
  * This class is useful to create connections to a MySQL database.
  * 
  * @author PablCendrero8310
  * 
  */
-public class Connector {
+public class MySQLConnector implements Connector{
 	private Connection connection;
 	private String host;
 	private int port;
@@ -17,7 +19,7 @@ public class Connector {
 	private String user;
 	private String password;
 
-	public Connector(String host, int port, String database, String user, String password) {
+	public MySQLConnector(String host, int port, String database, String user, String password) {
 		this.host = host;
 		this.port = port;
 		this.database = database;
