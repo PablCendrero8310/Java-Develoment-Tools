@@ -13,5 +13,5 @@ public interface JToggleButtonBoxPane<T extends JToggleButton, R> {
 
 	T add(String text, Icon icon);
 	
-	T[] getOptions();
+	
 }

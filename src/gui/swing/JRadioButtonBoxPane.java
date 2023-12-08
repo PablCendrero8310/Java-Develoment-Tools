@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * @author PablCendrero8310
  */
 
-public class JRadioButtonBoxPane extends JBoxPane implements JToggleButtonBoxPane<JRadioButton, String> {
+public class JRadioButtonBoxPane extends JBoxPane<JRadioButton> implements JToggleButtonBoxPane<JRadioButton, String> {
 	@java.io.Serial
 	private static final long serialVersionUID = 1L;
 	private ArrayList<JRadioButton> JRadioButtons = new ArrayList<JRadioButton>();
@@ -124,9 +124,12 @@ public class JRadioButtonBoxPane extends JBoxPane implements JToggleButtonBoxPan
 		return button;
 	}
 
+
+
 	@Override
-	public JRadioButton[] getOptions() {
-		return (JRadioButton[])(JRadioButtons.toArray());
+	public JRadioButton[] getComponents() {
+		JRadioButton[] radiobuttons = new JRadioButton[JRadioButtons.size()];
+		return JRadioButtons.toArray(radiobuttons);
 	}
 
 }

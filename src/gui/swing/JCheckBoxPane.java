@@ -7,7 +7,7 @@ import javax.swing.*;
 import gui.swing.exceptions.IncorrectArrayBoundsException;
 import gui.swing.interfaces.JToggleButtonBoxPane;
 
-public class JCheckBoxPane extends JBoxPane implements JToggleButtonBoxPane<JCheckBox,String[]> {
+public class JCheckBoxPane extends JBoxPane<JCheckBox> implements JToggleButtonBoxPane<JCheckBox,String[]> {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<String> selected = new ArrayList<String>();
 	private ArrayList<JCheckBox> JCheckBoxes = new ArrayList<JCheckBox>();
@@ -98,7 +98,7 @@ public class JCheckBoxPane extends JBoxPane implements JToggleButtonBoxPane<JChe
 	}
 
 	@Override
-	public JCheckBox[] getOptions() {
+	public JCheckBox[] getComponents() {
 		// TODO Auto-generated method stub
 		return null;
 	}

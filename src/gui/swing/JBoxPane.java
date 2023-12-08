@@ -1,10 +1,12 @@
 package gui.swing;
 
+import java.awt.Component;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
-public class JBoxPane extends JPanel {
+public abstract class JBoxPane<T extends Component> extends JPanel {
 	@java.io.Serial
 	private static final long serialVersionUID = 7620918813842749542L;
 
@@ -19,4 +21,5 @@ public class JBoxPane extends JPanel {
 		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), t));
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 	}
+	public abstract T[] getComponents();
 }
